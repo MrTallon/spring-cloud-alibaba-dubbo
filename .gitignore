@@ -1,0 +1,4 @@
+# Project exclude paths
+/business/business-demo-service/target/
+/provider/provider-demo-api/target/
+/provider/provider-demo-service/target/
