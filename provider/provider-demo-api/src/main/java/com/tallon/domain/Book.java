@@ -1,4 +1,4 @@
-package com.tallon;
+package com.tallon.domain;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
@@ -8,7 +8,7 @@ import lombok.experimental.Accessors;
 /**
  * @author tallon
  * @version v1.0.0
- * @date 2020-04-27 00:26
+ * @date 2020-04-27 09:23
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

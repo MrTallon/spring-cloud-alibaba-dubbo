@@ -1,15 +1,12 @@
 package com.tallon.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.tallon.Book;
+import com.tallon.domain.Store;
 
 /**
- * 测试用mapper
- *
  * @author tallon
  * @version v1.0.0
- * @date 2020-04-26 21:21
+ * @date 2020-04-27 09:27
  */
-public interface DemoMapper extends BaseMapper<Book> {
-
+public interface StoreMapper extends BaseMapper<Store> {
 }
