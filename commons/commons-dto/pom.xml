@@ -5,24 +5,11 @@
 
     <parent>
         <groupId>com.tallon</groupId>
-        <artifactId>parent</artifactId>
+        <artifactId>commons</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>commons</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>commons-dto</artifactId>
+    <packaging>jar</packaging>
     <inceptionYear>2018-Now</inceptionYear>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
-    </dependencies>
-
-    <modules>
-        <module>commons-dto</module>
-        <module>commons-utils</module>
-        <module>commons-provider</module>
-    </modules>
 </project>
