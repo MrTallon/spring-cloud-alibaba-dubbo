@@ -6,8 +6,11 @@ import com.tallon.commons.dto.ResponseResult;
 import com.tallon.domain.Admin;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -21,6 +24,9 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "reg")
 public class AdminController {
+
+    @Resource
+    private BCryptPasswordEncoder passwordEncoder;
 
     @Reference(version = "1.0.0")
     private AdminService service;
@@ -42,7 +48,12 @@ public class AdminController {
 
         // 通过验证
         if (message == null) {
-            // TODO 明文加密处理
+            umsAdmin.setCreateTime(LocalDateTime.now());
+            umsAdmin.setLoginTime(LocalDateTime.now());
+            if (umsAdmin.getStatus() == null) {
+                umsAdmin.setStatus(0);
+            }
+            umsAdmin.setPassword(passwordEncoder.encode(umsAdmin.getPassword()));
             boolean save = service.save(umsAdmin);
             // 注册成功
             if (save) {
@@ -65,11 +76,9 @@ public class AdminController {
         // TODO 改为 hibernate validate 注解处理
         Admin admin = service.getOne(Wrappers.<Admin>lambdaQuery()
                 .eq(Admin::getUsername, umsAdmin.getUsername()));
-
         if (admin != null) {
             return "用户名已存在，请重新输入";
         }
-
         return null;
     }
 
