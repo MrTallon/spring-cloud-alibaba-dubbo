@@ -44,11 +44,11 @@
         </dependency>
 
         <!-- Projects -->
-<!--        <dependency>-->
-<!--            <groupId>com.funtl.myshop.plus</groupId>-->
-<!--            <artifactId>commons-dto</artifactId>-->
-<!--            <version>${project.parent.version}</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.tallon</groupId>
+            <artifactId>commons-dto</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
 <!--        <dependency>-->
 <!--            <groupId>com.funtl.myshop.plus</groupId>-->
 <!--            <artifactId>commons-utils</artifactId>-->
@@ -71,5 +71,7 @@
 
         <module>business-demo-feign</module>
         <module>business-demo-service</module>
+        <module>business-ums-feign</module>
+        <module>business-ums-service</module>
     </modules>
 </project>
