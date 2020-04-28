@@ -1,8 +1,8 @@
-package com.tallon.service.impl;
+package com.tallon.service;
 
 import com.tallon.domain.PrefrenceAreaProductRelation;
 import com.tallon.mapper.PrefrenceAreaProductRelationMapper;
-import com.tallon.service.PrefrenceAreaProductRelationService;
+import com.tallon.api.PrefrenceAreaProductRelationService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

@@ -1,8 +1,8 @@
-package com.tallon.service.impl;
+package com.tallon.service;
 
 import com.tallon.domain.SubjectProductRelation;
 import com.tallon.mapper.SubjectProductRelationMapper;
-import com.tallon.service.SubjectProductRelationService;
+import com.tallon.api.SubjectProductRelationService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

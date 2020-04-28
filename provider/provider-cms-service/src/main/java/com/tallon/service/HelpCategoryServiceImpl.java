@@ -1,8 +1,8 @@
-package com.tallon.service.impl;
+package com.tallon.service;
 
 import com.tallon.domain.HelpCategory;
 import com.tallon.mapper.HelpCategoryMapper;
-import com.tallon.service.HelpCategoryService;
+import com.tallon.api.HelpCategoryService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

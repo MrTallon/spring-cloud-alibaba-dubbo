@@ -1,4 +1,4 @@
-package com.tallon.service;
+package com.tallon.api;
 
 import com.tallon.domain.Help;
 import com.baomidou.mybatisplus.extension.service.IService;

@@ -1,8 +1,8 @@
-package com.tallon.service.impl;
+package com.tallon.service;
 
 import com.tallon.domain.TopicComment;
 import com.tallon.mapper.TopicCommentMapper;
-import com.tallon.service.TopicCommentService;
+import com.tallon.api.TopicCommentService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

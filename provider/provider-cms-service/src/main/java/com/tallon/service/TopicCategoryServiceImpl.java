@@ -1,8 +1,8 @@
-package com.tallon.service.impl;
+package com.tallon.service;
 
 import com.tallon.domain.TopicCategory;
 import com.tallon.mapper.TopicCategoryMapper;
-import com.tallon.service.TopicCategoryService;
+import com.tallon.api.TopicCategoryService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
