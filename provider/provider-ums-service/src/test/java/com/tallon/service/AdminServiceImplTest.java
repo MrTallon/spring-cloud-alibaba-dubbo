@@ -1,6 +1,7 @@
 package com.tallon.service;
 
 import api.AdminService;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.tallon.domain.Admin;
 import com.tallon.mapper.AdminMapper;
 import org.junit.Test;
@@ -34,7 +35,12 @@ public class AdminServiceImplTest {
 
     @Test
     public void testService() {
-        List<Admin> list = service.list();
-        list.forEach(System.out::println);
+//        List<Admin> list = service.list();
+//        list.forEach(System.out::println);
+
+        Admin admin = service.getOne(Wrappers.<Admin>lambdaQuery()
+                .eq(Admin::getUsername, "admin"));
+        System.out.println(admin);
+
     }
 }
