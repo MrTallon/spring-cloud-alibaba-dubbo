@@ -12,7 +12,7 @@ import java.io.Serializable;
  * @date 2020-04-28 11:31
  */
 @Data
-public class ResponseResult <T> implements Serializable {
+public class ResponseResult<T> implements Serializable {
     private static final long serialVersionUID = 3468352004150968551L;
 
     /**
@@ -120,14 +120,6 @@ public class ResponseResult <T> implements Serializable {
 
     /**
      * 通用状态码
-     * <p>
-     * Description:
-     * </p>
-     *
-     * @author Lusifer
-     * @version v1.0.0
-     * @date 2019-07-30 05:02:49
-     * @see com.funtl.myshop.plus.commons.dto
      */
     public class CodeStatus {
         /**
