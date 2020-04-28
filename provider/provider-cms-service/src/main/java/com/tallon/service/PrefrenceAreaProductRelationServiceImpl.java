@@ -4,7 +4,7 @@ import com.tallon.domain.PrefrenceAreaProductRelation;
 import com.tallon.mapper.PrefrenceAreaProductRelationMapper;
 import com.tallon.api.PrefrenceAreaProductRelationService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import org.springframework.stereotype.Service;
+import org.apache.dubbo.config.annotation.Service;
 
 /**
  * <p>
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
  * @author Tallon
  * @since 2020-04-28
  */
-@Service
+@Service(version = "1.0.0")
 public class PrefrenceAreaProductRelationServiceImpl extends ServiceImpl<PrefrenceAreaProductRelationMapper, PrefrenceAreaProductRelation> implements PrefrenceAreaProductRelationService {
 
 }
