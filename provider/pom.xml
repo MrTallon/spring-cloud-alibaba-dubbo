@@ -76,21 +76,25 @@
         </dependency>
 
         <!-- Projects -->
-<!--        <dependency>-->
-<!--            <groupId>com.funtl.myshop.plus</groupId>-->
-<!--            <artifactId>commons-provider</artifactId>-->
-<!--            <version>${project.parent.version}</version>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>com.funtl.myshop.plus</groupId>-->
-<!--            <artifactId>configuration-sentinel</artifactId>-->
-<!--            <version>${project.parent.version}</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.tallon</groupId>
+            <artifactId>commons-provider</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.tallon</groupId>
+            <artifactId>configuration-sentinel</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
     </dependencies>
 
     <modules>
         <module>provider-demo-api</module>
         <module>provider-demo-service</module>
+        <module>provider-mybatis-plus-generator</module>
+
+        <module>provider-cms-api</module>
+        <module>provider-cms-service</module>
 <!--        <module>provider-admin-api</module>-->
 <!--        <module>provider-admin-service</module>-->
 <!--        <module>provider-admin-login-log-api</module>-->
