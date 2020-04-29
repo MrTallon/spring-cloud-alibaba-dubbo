@@ -17,7 +17,8 @@
 |  Dubbo    |   100%   |   ✅   |
 |   Nacos   |   100%   |    ✅  |
 | MyBatisPlus | 100% | ✅ |
-| oAuth2 | 50% | 
+| Security | 50% | 
+| sentinel | 0% |
 | WebFlux | 0% |
 | Redis | 0% |
 | RocketMQ | 0% |
