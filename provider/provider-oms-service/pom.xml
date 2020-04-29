@@ -81,7 +81,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.tallon.ProviderOmsApplication</mainClass>
+                    <mainClass>com.oms.ProviderOmsApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

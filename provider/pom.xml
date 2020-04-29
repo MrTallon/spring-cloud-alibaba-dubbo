@@ -89,11 +89,6 @@
         <!-- Projects -->
         <dependency>
             <groupId>com.tallon</groupId>
-            <artifactId>commons-provider</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.tallon</groupId>
             <artifactId>configuration-sentinel</artifactId>
             <version>${project.parent.version}</version>
         </dependency>

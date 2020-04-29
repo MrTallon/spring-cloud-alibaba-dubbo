@@ -6,7 +6,7 @@ base:
 
 spring:
   application:
-    name: demo-provider
+    name: cms-provider
   main:
     allow-bean-definition-overriding: true
   datasource:
@@ -28,7 +28,7 @@ spring:
 
 dubbo:
   scan:
-    base-packages: com.tallon.service
+    base-packages: com.cms.service
   protocol:
     name: dubbo
     port: -1
