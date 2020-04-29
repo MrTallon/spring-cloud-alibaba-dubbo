@@ -75,6 +75,17 @@
             <artifactId>spring-context-support</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+        </dependency>
+
         <!-- Projects -->
         <dependency>
             <groupId>com.tallon</groupId>
@@ -89,17 +100,13 @@
     </dependencies>
 
     <modules>
-        <module>provider-demo-api</module>
-        <module>provider-demo-service</module>
         <module>provider-mybatis-plus-generator</module>
 
         <module>provider-cms-api</module>
         <module>provider-cms-service</module>
         <module>provider-ums-api</module>
         <module>provider-ums-service</module>
-<!--        <module>provider-admin-api</module>-->
-<!--        <module>provider-admin-service</module>-->
-<!--        <module>provider-admin-login-log-api</module>-->
-<!--        <module>provider-admin-login-log-service</module>-->
+        <module>provider-oms-api</module>
+        <module>provider-oms-service</module>
     </modules>
 </project>

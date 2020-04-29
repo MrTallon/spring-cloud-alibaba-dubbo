@@ -2,7 +2,7 @@ package com.tallon.service;
 
 import com.tallon.domain.IntegrationConsumeSetting;
 import com.tallon.mapper.IntegrationConsumeSettingMapper;
-import api.IntegrationConsumeSettingService;
+import com.tallon.api.IntegrationConsumeSettingService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.apache.dubbo.config.annotation.Service;
 

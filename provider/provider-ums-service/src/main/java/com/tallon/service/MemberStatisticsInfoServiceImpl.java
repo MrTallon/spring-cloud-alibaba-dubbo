@@ -2,7 +2,7 @@ package com.tallon.service;
 
 import com.tallon.domain.MemberStatisticsInfo;
 import com.tallon.mapper.MemberStatisticsInfoMapper;
-import api.MemberStatisticsInfoService;
+import com.tallon.api.MemberStatisticsInfoService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.apache.dubbo.config.annotation.Service;
 

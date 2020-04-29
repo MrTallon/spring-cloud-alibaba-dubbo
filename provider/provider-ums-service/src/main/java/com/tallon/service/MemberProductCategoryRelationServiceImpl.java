@@ -2,7 +2,7 @@ package com.tallon.service;
 
 import com.tallon.domain.MemberProductCategoryRelation;
 import com.tallon.mapper.MemberProductCategoryRelationMapper;
-import api.MemberProductCategoryRelationService;
+import com.tallon.api.MemberProductCategoryRelationService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.apache.dubbo.config.annotation.Service;
 

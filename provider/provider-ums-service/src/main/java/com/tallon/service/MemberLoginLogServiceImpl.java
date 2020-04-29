@@ -2,7 +2,7 @@ package com.tallon.service;
 
 import com.tallon.domain.MemberLoginLog;
 import com.tallon.mapper.MemberLoginLogMapper;
-import api.MemberLoginLogService;
+import com.tallon.api.MemberLoginLogService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.apache.dubbo.config.annotation.Service;
 

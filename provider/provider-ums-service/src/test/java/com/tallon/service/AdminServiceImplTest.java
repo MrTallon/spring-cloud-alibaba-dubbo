@@ -1,6 +1,6 @@
 package com.tallon.service;
 
-import api.AdminService;
+import com.tallon.api.AdminService;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.tallon.domain.Admin;
 import com.tallon.mapper.AdminMapper;

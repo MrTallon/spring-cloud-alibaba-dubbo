@@ -9,7 +9,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>provider-cms-api</artifactId>
+    <artifactId>provider-oms-api</artifactId>
     <packaging>jar</packaging>
     <inceptionYear>2018-Now</inceptionYear>
 

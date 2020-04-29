@@ -2,7 +2,7 @@ package com.tallon.service;
 
 import com.tallon.domain.AdminPermissionRelation;
 import com.tallon.mapper.AdminPermissionRelationMapper;
-import api.AdminPermissionRelationService;
+import com.tallon.api.AdminPermissionRelationService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.apache.dubbo.config.annotation.Service;
 

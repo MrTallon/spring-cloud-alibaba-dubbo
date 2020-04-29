@@ -28,14 +28,20 @@ public class AutoCreate {
                 "cms_topic_comment";
          */
 
-        // 表名
-        String tables = "ums_admin,ums_admin_login_log,ums_admin_permission_relation," +
+        /*
+        ums
+        "ums_admin,ums_admin_login_log,ums_admin_permission_relation," +
                 "ums_admin_role_relation,ums_growth_change_history," +
                 "ums_integration_change_history,ums_integration_consume_setting," +
                 "ums_member,ums_member_level,ums_member_login_log,ums_member_member_tag_relation," +
                 "ums_member_product_category_relation,ums_member_receive-address," +
                 "ums_member_rule_setting,ums_member_statistics_info,ums_member_tag," +
                 "ums_member_task,ums_permission,ums_role,ums_role_permission_relation";
+         */
+
+        // 表名
+        // TODO OMS
+        String tables = "";
 
         //1.全局配置
         GlobalConfig config = new GlobalConfig();

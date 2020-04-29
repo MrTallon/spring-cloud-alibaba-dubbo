@@ -2,7 +2,7 @@ package com.tallon.service;
 
 import com.tallon.domain.Role;
 import com.tallon.mapper.RoleMapper;
-import api.RoleService;
+import com.tallon.api.RoleService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.apache.dubbo.config.annotation.Service;
 

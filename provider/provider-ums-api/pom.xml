@@ -13,18 +13,4 @@
     <packaging>jar</packaging>
     <inceptionYear>2018-Now</inceptionYear>
 
-    <dependencies>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-generator</artifactId>
-        </dependency>
-
-    </dependencies>
 </project>

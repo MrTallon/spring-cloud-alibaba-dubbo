@@ -2,7 +2,7 @@ package com.tallon.service;
 
 import com.tallon.domain.IntegrationChangeHistory;
 import com.tallon.mapper.IntegrationChangeHistoryMapper;
-import api.IntegrationChangeHistoryService;
+import com.tallon.api.IntegrationChangeHistoryService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.apache.dubbo.config.annotation.Service;
 

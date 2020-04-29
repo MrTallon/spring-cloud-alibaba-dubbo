@@ -2,7 +2,7 @@ package com.tallon.service;
 
 import com.tallon.domain.MemberRuleSetting;
 import com.tallon.mapper.MemberRuleSettingMapper;
-import api.MemberRuleSettingService;
+import com.tallon.api.MemberRuleSettingService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.apache.dubbo.config.annotation.Service;
 
