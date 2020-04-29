@@ -24,7 +24,7 @@ dubbo:
 
 server:
   # ${random.int[9000,9999]} 随机端口
-  port: 9001
+  port: 9000
 
 management:
   endpoints:

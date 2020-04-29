@@ -9,7 +9,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>business-demo-service</artifactId>
+    <artifactId>business-profile-service</artifactId>
     <packaging>jar</packaging>
     <inceptionYear>2018-Now</inceptionYear>
 
@@ -29,6 +29,12 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Spring Cloud -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-oauth2</artifactId>
+        </dependency>
+
         <!-- Spring Cloud Alibaba -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
@@ -38,7 +44,12 @@
         <!-- Projects -->
         <dependency>
             <groupId>com.tallon</groupId>
-            <artifactId>provider-demo-api</artifactId>
+            <artifactId>business-profile-feign</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.tallon</groupId>
+            <artifactId>provider-ums-api</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
     </dependencies>
@@ -49,10 +60,9 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.tallon.BusinessDemoApplication</mainClass>
+                    <mainClass>com.tallon.BusinessProfileApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 </project>

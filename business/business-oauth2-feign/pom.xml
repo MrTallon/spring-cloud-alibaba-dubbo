@@ -9,7 +9,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>business-demo-feign</artifactId>
+    <artifactId>business-oauth2-feign</artifactId>
     <packaging>jar</packaging>
     <inceptionYear>2018-Now</inceptionYear>
 

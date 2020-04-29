@@ -1,7 +1,7 @@
 package com.tallon.controller;
 
-import api.AdminService;
-import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import com.tallon.api.AdminService;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.tallon.commons.dto.ResponseResult;
 import com.tallon.domain.Admin;
 import org.apache.dubbo.config.annotation.Reference;
@@ -57,8 +57,9 @@ public class AdminController {
             boolean save = service.save(umsAdmin);
             // 注册成功
             if (save) {
-                Admin admin = service.getOne(Wrappers.<Admin>lambdaQuery()
-                        .eq(Admin::getUsername, umsAdmin.getUsername()));
+//                Admin admin = service.getOne(Wrappers.<Admin>lambdaQuery()
+//                        .eq(Admin::getUsername, umsAdmin.getUsername()));
+                Admin admin = service.getOne(new QueryWrapper<>(new Admin().setUsername(umsAdmin.getUsername())));
                 return new ResponseResult<>(HttpStatus.OK.value(), "用户注册成功", admin);
             }
         }
@@ -74,8 +75,7 @@ public class AdminController {
      */
     private String validateReg(Admin umsAdmin) {
         // TODO 改为 hibernate validate 注解处理
-        Admin admin = service.getOne(Wrappers.<Admin>lambdaQuery()
-                .eq(Admin::getUsername, umsAdmin.getUsername()));
+        Admin admin = service.getOne(new QueryWrapper<>(new Admin().setUsername(umsAdmin.getUsername())));
         if (admin != null) {
             return "用户名已存在，请重新输入";
         }

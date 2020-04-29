@@ -4,13 +4,15 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
+ * oAuth启动类
+ *
  * @author tallon
  * @version v1.0.0
- * @date 2020-04-26 21:40
+ * @date 2020-04-29 11:33
  */
 @SpringBootApplication
-public class BusinessDemoApplication {
+public class BusinessOAuth2Application {
     public static void main(String[] args) {
-        SpringApplication.run(BusinessDemoApplication.class, args);
+        SpringApplication.run(BusinessOAuth2Application.class, args);
     }
 }
