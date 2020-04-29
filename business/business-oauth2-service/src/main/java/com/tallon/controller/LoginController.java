@@ -1,20 +1,23 @@
 package com.tallon.controller;
 
+import com.cloud.api.MessageService;
+import com.cloud.dto.UmsAdminLoginLogDTO;
 import com.google.common.collect.Maps;
-import com.tallon.api.AdminService;
 import com.tallon.business.BusinessException;
 import com.tallon.business.BusinessStatus;
 import com.tallon.commons.dto.ResponseResult;
-import com.tallon.domain.Admin;
 import com.tallon.dto.LoginInfo;
 import com.tallon.dto.LoginParam;
+import com.tallon.feign.ProfileFeign;
 import com.tallon.utils.MapperUtils;
 import com.tallon.utils.OkHttpClientUtil;
 import com.tallon.utils.UserAgentUtils;
+import com.ums.api.UmsAdminService;
+import com.ums.domain.UmsAdmin;
 import eu.bitwalker.useragentutils.Browser;
 import okhttp3.Response;
-import org.springframework.beans.factory.annotation.Value;
 import org.apache.dubbo.config.annotation.Reference;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -30,6 +33,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.Date;
 import java.util.Map;
 import java.util.Objects;
 
@@ -67,7 +71,7 @@ public class LoginController {
     private ProfileFeign profileFeign;
 
     @Reference(version = "1.0.0")
-    private AdminService umsAdminService;
+    private UmsAdminService umsAdminService;
 
     @Reference(version = "1.0.0")
     private MessageService messageService;
@@ -109,9 +113,9 @@ public class LoginController {
             sendAdminLoginLog(userDetails.getUsername(), request);
         } catch (Exception e) {
             e.printStackTrace();
-        }
+    }
 
-        return new ResponseResult<Map<String, Object>>(ResponseResult.CodeStatus.OK, "登录成功", result);
+        return new ResponseResult<>(ResponseResult.CodeStatus.OK, "登录成功", result);
     }
 
     /**
@@ -127,7 +131,7 @@ public class LoginController {
 
         // 获取个人信息
         String jsonString = profileFeign.info(authentication.getName());
-        Admin umsAdmin = MapperUtils.json2pojoByTree(jsonString, "data", Admin.class);
+        UmsAdmin umsAdmin = MapperUtils.json2pojoByTree(jsonString, "data", UmsAdmin.class);
 
         // 如果触发熔断则返回熔断结果
         if (umsAdmin == null) {
@@ -164,8 +168,7 @@ public class LoginController {
      * @param request {@link HttpServletRequest}
      */
     private void sendAdminLoginLog(String username, HttpServletRequest request) {
-        // TODO  字段查询      umsAdminService.get(username);
-        Admin umsAdmin = null;
+        UmsAdmin umsAdmin = umsAdminService.getByName(username);
 
         if (umsAdmin != null) {
             // 获取请求的用户代理信息

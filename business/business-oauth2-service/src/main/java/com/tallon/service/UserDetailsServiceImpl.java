@@ -1,8 +1,8 @@
 package com.tallon.service;
 
 import com.google.common.collect.Lists;
-import com.tallon.api.AdminService;
-import com.tallon.domain.Admin;
+import com.ums.api.UmsAdminService;
+import com.ums.domain.UmsAdmin;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -27,13 +27,12 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     private static final String PASSWORD = "$2a$10$YNUV/BtCel2orbhgrxyPJeljdKVty6yTAL.Cj4v3XhwHWXBkgyPYW";
 
     @Reference(version = "1.0.0")
-    private AdminService umsAdminService;
+    private UmsAdminService umsAdminService;
 
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         // 查询用户
-        // TODO 字段查询 umsAdminService.get(s);
-        Admin umsAdmin = new Admin();
+        UmsAdmin umsAdmin = umsAdminService.getByName(s);
 
         // 默认所有用户拥有 USER 权限
         List<GrantedAuthority> grantedAuthorities = Lists.newArrayList();
