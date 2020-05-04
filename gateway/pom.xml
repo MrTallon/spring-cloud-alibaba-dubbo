@@ -13,21 +13,6 @@
     <packaging>jar</packaging>
     <inceptionYear>2018-Now</inceptionYear>
 
-    <licenses>
-        <license>
-            <name>Apache 2.0</name>
-            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
-        </license>
-    </licenses>
-
-    <developers>
-        <developer>
-            <id>liwemin</id>
-            <name>Lusifer Lee</name>
-            <email>lee.lusifer@gmail.com</email>
-        </developer>
-    </developers>
-
     <dependencies>
         <!-- Spring Boot -->
         <dependency>
@@ -65,7 +50,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.funtl.myshop.plus.gateway.GatewayApplication</mainClass>
+                    <mainClass>com.gateway.GatewayApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

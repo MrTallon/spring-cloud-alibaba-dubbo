@@ -1,22 +1,20 @@
-package com.tallon;
+package com.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
- * oAuth启动类
+ * 网关启动类
  *
  * @author tallon
  * @version v1.0.0
- * @date 2020-04-29 11:33
+ * @date 2020-04-30 00:39
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableFeignClients
-public class BusinessOAuth2Application {
+public class GatewayApplication {
     public static void main(String[] args) {
-        SpringApplication.run(BusinessOAuth2Application.class, args);
+        SpringApplication.run(GatewayApplication.class, args);
     }
 }

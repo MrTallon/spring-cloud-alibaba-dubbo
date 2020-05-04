@@ -1,5 +1,6 @@
 package com.ums;
 
+import com.tallon.DubboSentinelConfiguration;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,7 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @version v1.0.0
  * @date 2020-04-28 10:29
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackageClasses = {ProviderUmsApplication.class, DubboSentinelConfiguration.class})
 @MapperScan("com.ums.mapper")
 public class ProviderUmsApplication {
     public static void main(String[] args) {

@@ -12,7 +12,6 @@ import javax.annotation.Resource;
 import java.time.LocalDateTime;
 import java.util.List;
 
-
 /**
  * 注册服务
  *
@@ -20,7 +19,7 @@ import java.util.List;
  * @version v1.0.0
  * @date 2020-04-29 15:16
  */
-@CrossOrigin(origins = "*", maxAge = 3600)
+//@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping(value = "reg")
 public class RegController {
@@ -38,25 +37,18 @@ public class RegController {
 
     /**
      * 注册
+     *
      * @param umsAdmin {@link UmsAdmin}
      * @return {@link ResponseResult}
      */
-    @PostMapping(value ="")
+    @PostMapping(value = "")
     public ResponseResult<UmsAdmin> reg(@RequestBody UmsAdmin umsAdmin) {
         String message = validateReg(umsAdmin);
 
         // 通过验证
         if (message == null) {
-
-            umsAdmin.setCreateTime(LocalDateTime.now());
-            umsAdmin.setLoginTime(LocalDateTime.now());
-            if (umsAdmin.getStatus() == null) {
-                umsAdmin.setStatus(0);
-            }
-            umsAdmin.setPassword(passwordEncoder.encode(umsAdmin.getPassword()));
-
+            initAdmin(umsAdmin);
             boolean save = umsAdminService.save(umsAdmin);
-
             // 注册成功
             if (save) {
                 UmsAdmin admin = umsAdminService.getByName(umsAdmin.getUsername());
@@ -66,6 +58,23 @@ public class RegController {
 
         return new ResponseResult<>(HttpStatus.NOT_ACCEPTABLE.value(), message != null ? message : "用户注册失败");
     }
+
+    /**
+     * 初始化存储对象
+     *
+     * @param umsAdmin {@link UmsAdmin}
+     * @return {@link UmsAdmin}
+     */
+    private UmsAdmin initAdmin(UmsAdmin umsAdmin) {
+        umsAdmin.setCreateTime(LocalDateTime.now());
+        umsAdmin.setLoginTime(LocalDateTime.now());
+        if (umsAdmin.getStatus() == null) {
+            umsAdmin.setStatus(0);
+        }
+        umsAdmin.setPassword(passwordEncoder.encode(umsAdmin.getPassword()));
+        return umsAdmin;
+    }
+
     /**
      * 注册信息验证
      *

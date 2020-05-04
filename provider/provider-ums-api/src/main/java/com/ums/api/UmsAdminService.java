@@ -19,4 +19,20 @@ public interface UmsAdminService extends IService<UmsAdmin> {
      * @return {@link UmsAdmin}
      */
     UmsAdmin getByName(String username);
+
+    /**
+     * 根据用户名修改密码
+     * @param username 用户名
+     * @param newPassword 密码
+     * @return 修改结果
+     */
+    boolean modifyPassword(String username, String newPassword);
+
+    /**
+     * 根据用户名修改头像
+     * @param username 用户名
+     * @param path 头像
+     * @return 修改结果
+     */
+    boolean modifyIcon(String username, String path);
 }

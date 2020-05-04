@@ -60,6 +60,6 @@
     </dependencies>
 
     <modules>
-<!--        <module>message-admin-login-log</module>-->
+        <module>message-admin-login-log</module>
     </modules>
 </project>

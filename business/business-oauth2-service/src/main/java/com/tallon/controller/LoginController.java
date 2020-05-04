@@ -1,6 +1,5 @@
 package com.tallon.controller;
 
-import com.cloud.api.MessageService;
 import com.cloud.dto.UmsAdminLoginLogDTO;
 import com.google.common.collect.Maps;
 import com.tallon.business.BusinessException;
@@ -72,9 +71,9 @@ public class LoginController {
 
     @Reference(version = "1.0.0")
     private UmsAdminService umsAdminService;
-
-    @Reference(version = "1.0.0")
-    private MessageService messageService;
+//
+//    @Reference(version = "1.0.0")
+//    private MessageService messageService;
 
     /**
      * 登录
@@ -183,7 +182,7 @@ public class LoginController {
             dto.setAddress(address);
             dto.setUserAgent(browser.getName());
 
-            messageService.sendAdminLoginLog(dto);
+//            messageService.sendAdminLoginLog(dto);
         }
     }
 }
