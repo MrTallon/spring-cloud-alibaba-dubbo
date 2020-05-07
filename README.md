@@ -106,7 +106,8 @@ java -Dserver.port=8080 -Dcsp.sentinel.dashboard.server=localhost:8080 -Dproject
 Maven 有一个小坑，依赖过深的话（3层以上），可能有传递不下来的现象（一定概率上触发），故尽量注意避免
 
 TODO
-配置文件上Nacos
+配置文件上Nacos  
+docker-compose -f example/standalone-mysql.yaml up
 
 
 
