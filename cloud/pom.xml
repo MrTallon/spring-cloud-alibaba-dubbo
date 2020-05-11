@@ -5,7 +5,7 @@
 
     <parent>
         <groupId>com.tallon</groupId>
-        <artifactId>parent</artifactId>
+        <artifactId>spring-cloud-alibaba-dubbo</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
