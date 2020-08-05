@@ -41,14 +41,6 @@
         </license>
     </licenses>
 
-    <developers>
-        <developer>
-            <id>liwemin</id>
-            <name>Lusifer Lee</name>
-            <email>lee.lusifer@gmail.com</email>
-        </developer>
-    </developers>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
